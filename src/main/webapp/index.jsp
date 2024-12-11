@@ -5,10 +5,10 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
-<a href="WEB-INF/jsp/login.jsp">Login JSP</a>
+Redirigiendo. Por favor, espere...
+<%
+    response.sendRedirect("LoginServlet");
+%>
+
 </body>
 </html>
