@@ -23,6 +23,14 @@
             <input type="number" class="form-control" id="height" name="height" required>
         </div>
         <button type="submit" class="btn btn-primary w-100">Generar</button>
+        <div class="mt-3 text-danger">
+            <%
+                String error = (String) request.getAttribute("error");
+                if (error != null && !error.isEmpty()) {
+                    out.print(error);
+                }
+            %>
+        </div>
     </form>
 </div>
 </body>

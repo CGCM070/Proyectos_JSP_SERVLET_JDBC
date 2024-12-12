@@ -26,6 +26,7 @@
 <body>
 <div class="container mt-5">
     <h2 class="text-center">Pirámide de Gatos</h2>
+    <a class="btn btn-primary text-center" href="index.jsp">Volver</a>
     <%
         // Recuperar la altura de la pirámide desde el atributo de la solicitud
         int height = (int) request.getAttribute("height");
@@ -39,6 +40,8 @@
             out.println("</div>");
         }
     %>
+
+
 </div>
 </body>
 </html>
