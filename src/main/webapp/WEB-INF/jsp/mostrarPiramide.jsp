@@ -34,7 +34,7 @@
         for (int i = 1; i <= height; i++) {
             out.println("<div class='cat-row'>");
             for (int j = 1; j <= i; j++) {
-                out.println("<img src='images/cat_image.jpg' alt='Cat' width='50' height='50'>");
+                out.println("<img src='images/gato.png' alt='Gato' width='50' height='50'>");
             }
             out.println("</div>");
         }
