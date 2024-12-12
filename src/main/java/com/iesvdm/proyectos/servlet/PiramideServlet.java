@@ -15,8 +15,16 @@ public class PiramideServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int altura = Integer.parseInt(request.getParameter("height"));
-        request.setAttribute("altura", altura);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mostrarPiramide.jsp");
-        dispatcher.forward(request, response);
+
+        if (altura>0){
+            request.setAttribute("altura", altura);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mostrarPiramide.jsp");
+            dispatcher.forward(request, response);
+        }else{
+            request.setAttribute("error", "La altura debe ser mayor que 0");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/piramide.jsp");
+            dispatcher.forward(request, response);
+        }
+
     }
 }

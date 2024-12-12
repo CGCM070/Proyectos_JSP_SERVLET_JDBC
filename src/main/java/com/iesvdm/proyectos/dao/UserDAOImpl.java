@@ -51,21 +51,18 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO {
 
     @Override
     public Optional<User> findByName(String name) {
-
-
         Connection conn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
 
-
         try {
             conn = connectDB();
-            ps = conn.prepareStatement("SELECT * FROM user WHERE username = ?");
+            ps = conn.prepareStatement("SELECT * FROM users WHERE username = ?");
             ps.setString(1, name);
             rs = ps.executeQuery();
             if (rs.next()) {
                 User user = new User();
-                user.setUserID(rs.getInt("userID"));
+                user.setUserID(rs.getInt("userID"));  // Asegúrate de que el campo en la base de datos se llama userID
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 return Optional.of(user);

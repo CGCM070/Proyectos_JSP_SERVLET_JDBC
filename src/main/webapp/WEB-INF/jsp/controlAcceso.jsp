@@ -14,7 +14,7 @@
 <body>
 <h1>Control de Acceso</h1>
 <p>Acceso permitido a la aplicación.</p>
-<form action="PiramideServlet" method="post">
+<form action="piramide.jsp" method="get">
     <button type="submit">Aceptar</button>
 </form>
 </body>
