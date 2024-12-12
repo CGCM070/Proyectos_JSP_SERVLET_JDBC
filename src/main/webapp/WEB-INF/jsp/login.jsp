@@ -11,9 +11,12 @@
 <div class="container mt-5">
     <h2 class="text-center">Iniciar Sesión</h2>
 
-    <p>Usuario : hash</p>
+
+    <p>Usuario : admin</p>
+    <p>Contraseña: admin</p>
     <br>
-    <p>Contraseña:d04b98f48e8f8bcc15c6ae5ac050801cd6dcfd428fb5f9e65c4e16e7807340fa</p>
+    <p>Usuario : hash</p>
+    <p>Contraseña: d04b98f48e8f8bcc15c6ae5ac050801cd6dcfd428fb5f9e65c4e16e7807340fa</p>
     <br>
     <form method="post" action="LoginServlet" class="mt-4">
         <div class="mb-3">
