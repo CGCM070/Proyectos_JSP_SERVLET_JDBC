@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-@WebServlet (name = "adminManagementServlet" , value = "/adminManagementServlet")
-public class adminManagementServlet extends HttpServlet {
+@WebServlet (name = "AdminManagementServlet" , value = "/AdminManagementServlet")
+public class AdminManagementServlet extends HttpServlet {
 
     private UserDAO userDAO  = new UserDAOImpl();
 
@@ -38,14 +38,14 @@ public class adminManagementServlet extends HttpServlet {
         RequestDispatcher dispatcher= null;
 
         String username = request.getParameter("username");
- //       String password = request.getParameter("password");
+//        String password = request.getParameter("password");
 
         Optional<User> optionalUser = UtilServlet.validaGrabarV1(request);
 
-        //!username.equals(userDAO.findByName(username)) && optionalUser.isPresent()
         if (optionalUser.isPresent() && userDAO.findByName(username).isEmpty() )  {
 
             User user = optionalUser.get();
+
             this.userDAO.create(user);
 
             List<User> listaUsuarios = this.userDAO.getAll();

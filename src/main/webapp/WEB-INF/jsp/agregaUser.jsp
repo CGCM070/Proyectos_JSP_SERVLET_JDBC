@@ -22,7 +22,7 @@
 <p style="color:red;"><%= request.getAttribute("error") %></p>
 <% } %>
 
-<form method="post" action="adminManagementServlet">
+<form method="post" action="AdminManagementServlet">
     <div class="row body mt-2">
         <div class="col-md-6 align-self-center">Nombre</div>
         <div class="col-md-6 align-self-center"><input type="text" name="username" required /></div>

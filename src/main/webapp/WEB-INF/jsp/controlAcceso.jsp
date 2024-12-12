@@ -52,7 +52,7 @@
     String username = (String) session.getAttribute("username");
     if ("admin".equals(username)) {
 %>
-<form action="adminManagementServlet" method="get">
+<form action="AdminManagementServlet" method="get">
     <button type="submit">Aceptar</button>
 </form>
 <%
