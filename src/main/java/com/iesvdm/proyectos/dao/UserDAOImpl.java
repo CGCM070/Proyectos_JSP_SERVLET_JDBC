@@ -62,7 +62,7 @@ public class UserDAOImpl extends AbstractDAOImpl implements UserDAO {
             rs = ps.executeQuery();
             if (rs.next()) {
                 User user = new User();
-                user.setUserID(rs.getInt("userID"));  // Asegúrate de que el campo en la base de datos se llama userID
+                user.setUserID(rs.getInt("userID"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 return Optional.of(user);
