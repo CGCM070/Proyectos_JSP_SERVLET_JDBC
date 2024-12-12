@@ -10,7 +10,7 @@
 <body>
 <div class="container mt-5">
     <h2 class="text-center">Iniciar Sesión</h2>
-    <form method="post" action="/LoginServlet" class="mt-4">
+    <form method="post" action="LoginServlet" class="mt-4">
         <div class="mb-3">
             <label for="username" class="form-label">Usuario</label>
             <input type="text" class="form-control" id="username" name="username" required>
