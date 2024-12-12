@@ -10,6 +10,9 @@
 <body>
 <div class="container mt-5">
     <h2 class="text-center">Iniciar Sesión</h2>
+    <p>Usuario : admin</p>
+    <p>Contraseña: admin</p>
+    <br>
     <form method="post" action="LoginServlet" class="mt-4">
         <div class="mb-3">
             <label for="username" class="form-label">Usuario</label>
