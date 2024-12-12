@@ -12,12 +12,21 @@ import java.io.IOException;
 @WebServlet(name = "PiramideServlet", value = "/PiramideServlet")
 public class PiramideServlet extends HttpServlet {
 
+
+    protected  void doGet( HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/piramide.jsp");
+        dispatcher.forward(request, response);
+    }
+
+
+
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int altura = Integer.parseInt(request.getParameter("height"));
 
         if (altura>0){
-            request.setAttribute("altura", altura);
+            request.setAttribute("height", altura);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/mostrarPiramide.jsp");
             dispatcher.forward(request, response);
         }else{
