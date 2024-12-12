@@ -49,7 +49,7 @@ public class adminManagementServlet extends HttpServlet {
             this.userDAO.create(user);
 
             List<User> listaUsuarios = this.userDAO.getAll();
-            request.setAttribute("listaUsuario" , listaUsuarios);
+            request.setAttribute("listaUsuarios" , listaUsuarios);
             request.setAttribute("newSocioID", user.getUserID());
 
         }else {
