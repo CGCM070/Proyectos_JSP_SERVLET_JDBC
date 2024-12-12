@@ -35,6 +35,7 @@
         <div class="col-md-6">&nbsp;</div>
         <div class="col-md-6 align-self-center">
             <input class="btn btn-primary" type="submit" value="Guardar usuario">
+            <a class="btn btn-primary text-center" href="index.jsp">Volver al incio</a>
         </div>
     </div>
 </form>
